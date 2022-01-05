@@ -46,9 +46,6 @@ class RegisterFragment : Fragment() {
 
 
         binding.btnRegisterRegister.setOnClickListener { view: View ->
-            //TODO INSERT USER BEFORE NAGIVATING BACK TO LOGIN.
-            //val usr = User(0, )
-            //registerViewModel.database.insertUser()
 
             //BIND THE DATA WHEN THE BUTTON IS CLICKED, NOT BEFORE.
             binding.apply {
@@ -64,31 +61,9 @@ class RegisterFragment : Fragment() {
                 }
 
             }
-
-
-            //admin - admin; test - test
-
-            //registerViewModel.database.deleteUserById(4)
-/*
-            for (dbName in registerViewModel.database.getAllNames()) {
-
-                if (dbName.equals(username)) {
-                    dupe = !dupe
-                    break
-                }
-            }
-
-            if (dupe)
-                Toast.makeText(activity, "User already registered.", Toast.LENGTH_LONG).show()
-            else {
-                registerViewModel.database.insertUser(usr)
-
-
-            }*/
         }
 
         binding.lifecycleOwner = this
-
         binding.registerViewModel = registerViewModel
 
         return binding.root

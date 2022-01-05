@@ -12,6 +12,9 @@ interface UserDao {
     @Query ("SELECT * FROM user WHERE userId = :key")
     fun getUserById(key: Long): User?
 
+    @Query ("SELECT * FROM user WHERE username = :key")
+    fun getUserByName(key: String): User?
+
     @Query ("SELECT username FROM user")
     fun getAllNames(): List<String>
 
