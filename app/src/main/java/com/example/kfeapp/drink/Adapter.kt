@@ -25,7 +25,7 @@ class Adapter(
         init {
             itemView.setOnClickListener { view: View ->
                 val position: Int = adapterPosition
-                Toast.makeText(itemView.context, "Item added: ${name.text}: ${price.text}", Toast.LENGTH_LONG).show()
+                Toast.makeText(itemView.context, "Item added: ${name.text} - ${price.text}", Toast.LENGTH_LONG).show()
 
             }
         }
