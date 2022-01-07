@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.kfeapp.db.drink.Drink
+import com.example.kfeapp.db.drink.DrinkDao
 import com.example.kfeapp.db.user.User
 import com.example.kfeapp.db.user.UserDao
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Drink::class], version = 2, exportSchema = false)
 abstract class KFeDB : RoomDatabase() {
 
     abstract val userDao: UserDao
+    abstract val drinkDao: DrinkDao
 
     companion object {
 
