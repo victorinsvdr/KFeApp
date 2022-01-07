@@ -1,4 +1,4 @@
-package com.example.kfeapp.drink
+package com.example.kfeapp.dessert
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -17,7 +17,7 @@ import com.example.kfeapp.db.drink.Drink
 
 class Adapter(
     private val context: Context,
-    private val list: ArrayList<DrinkModel>,
+    private val list: ArrayList<DessertModel>,
     private val vm: SharedViewModel
 ) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
@@ -31,8 +31,8 @@ class Adapter(
             itemView.setOnClickListener { view: View ->
                 val position: Int = adapterPosition
                 Toast.makeText(itemView.context, "Item added: ${name.text} - ${price.text}", Toast.LENGTH_SHORT).show()
-                vm.saveDrink(name.text.toString(), price.text.toString())
-                view.findNavController().navigate(R.id.action_drink_to_food)
+                vm.saveDessert(name.text.toString(), price.text.toString())
+                view.findNavController().navigate(R.id.action_dessert_to_order)
             }
         }
     }

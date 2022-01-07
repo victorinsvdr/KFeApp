@@ -38,5 +38,29 @@
     <fragment
         android:id="@+id/drinkFragment"
         android:name="com.example.kfeapp.drink.DrinkFragment"
-        android:label="DrinkFragment" />
+        android:label="DrinkFragment" >
+        <action
+            android:id="@+id/action_drink_to_food"
+            app:destination="@id/foodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.example.kfeapp.food.FoodFragment"
+        android:label="FoodFragment" >
+        <action
+            android:id="@+id/action_food_to_dessert"
+            app:destination="@id/dessertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.kfeapp.order.OrderFragment"
+        android:label="OrderFragment" />
+    <fragment
+        android:id="@+id/dessertFragment"
+        android:name="com.example.kfeapp.dessert.DessertFragment"
+        android:label="DessertFragment" >
+        <action
+            android:id="@+id/action_dessert_to_order"
+            app:destination="@id/orderFragment" />
+    </fragment>
 </navigation>
