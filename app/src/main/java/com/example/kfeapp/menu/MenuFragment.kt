@@ -47,8 +47,10 @@ class MenuFragment : Fragment() {
             }
 
             btnMenuGmail.setOnClickListener { view: View ->
-                val email = Intent(Intent.ACTION_DIAL)
-                email.setData(Uri.parse("tel:1112233"))
+                //val email = Intent(Intent.ACTION_DIAL)
+                val email = Intent(Intent.ACTION_SEND)
+                email.setType("text/plain")
+
                 //email.setType("text/plain")
                 startActivity(email)
             }

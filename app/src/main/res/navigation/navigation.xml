@@ -60,7 +60,9 @@
         android:label="OrderFragment" >
         <action
             android:id="@+id/action_order_to_menu"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/dessertFragment"

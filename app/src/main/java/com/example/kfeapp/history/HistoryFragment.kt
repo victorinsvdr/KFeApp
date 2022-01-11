@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kfeapp.R
-import com.example.kfeapp.databinding.FragmentDrinkBinding
 import com.example.kfeapp.databinding.FragmentHistoryBinding
 import com.example.kfeapp.db.KFeDB
 import com.example.kfeapp.drink.DrinkViewModel
@@ -46,7 +45,7 @@ class HistoryFragment : Fragment() {
         binding.apply {
             rvHistory.layoutManager = LinearLayoutManager(context)
             rvHistory.adapter = context?.let { Adapter(it, fetchOrders(orderViewModel)) }
-            rvHistory.addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
+            //rvHistory.addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
         }
 
         return binding.root
