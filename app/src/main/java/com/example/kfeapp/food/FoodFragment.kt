@@ -53,7 +53,7 @@ class FoodFragment : Fragment() {
 
 
         // INSERTS
-        /*
+/*
         foodViewModel.insert(Food(0, "Chorizo Sandwitch", "Delicious Chorizo from Burgos", 2.70))
         foodViewModel.insert(Food(0, "Tortilla Sandwitch", "Best Tortilla you will ever try", 3.00))
         foodViewModel.insert(Food(0, "Fuet Sandwitch", "Default description, I don't want to write", 3.20))
@@ -64,7 +64,7 @@ class FoodFragment : Fragment() {
         foodViewModel.insert(Food(0, "Pepper Sandwitch", "Default description, I don't want to write", 2.40))
         foodViewModel.insert(Food(0, "Jamon y Queso Sandwitch", "Default description, I don't want to write", 2.40))
         foodViewModel.insert(Food(0, "Morcilla Sandwitch", "Default description, I don't want to write", 3.45))
-        */
+*/
         //Toast.makeText(context, "${sharedViewModel.drink.value} PRICE: ${sharedViewModel.drinkPrice.value}" , Toast.LENGTH_LONG).show()
 
         binding.lifecycleOwner = this

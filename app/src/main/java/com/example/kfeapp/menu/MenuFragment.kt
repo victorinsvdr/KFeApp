@@ -1,5 +1,7 @@
 package com.example.kfeapp.menu
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,8 +37,21 @@ class MenuFragment : Fragment() {
             binding.tvUser.setText(name)
         })
 
-        binding.btnMenuOrder.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_menu_to_drink)
+        binding.apply {
+            btnMenuOrder.setOnClickListener { view: View ->
+                view.findNavController().navigate(R.id.action_menu_to_drink)
+            }
+
+            btnMenuOrderHistory.setOnClickListener { view: View ->
+                view.findNavController().navigate(R.id.action_order_to_history)
+            }
+
+            btnMenuGmail.setOnClickListener { view: View ->
+                val email = Intent(Intent.ACTION_DIAL)
+                email.setData(Uri.parse("tel:1112233"))
+                //email.setType("text/plain")
+                startActivity(email)
+            }
         }
 
         return binding.root

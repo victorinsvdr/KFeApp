@@ -51,7 +51,7 @@ class DrinkFragment : Fragment() {
 
 
         // INSERTS
-        /*
+/*
         drinkViewModel.insert(Drink(0, "Machiatto", "A machiatto coffee", 0.90))
         drinkViewModel.insert(Drink(0, "Ristretto", "A strong short sized coffee", 1.00))
         drinkViewModel.insert(Drink(0, "Ice Coffee", "Coffee with shards of ice", 1.20))

@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_menu_to_drink"
             app:destination="@id/drinkFragment" />
+        <action
+            android:id="@+id/action_order_to_history"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/drinkFragment"
@@ -54,7 +57,11 @@
     <fragment
         android:id="@+id/orderFragment"
         android:name="com.example.kfeapp.order.OrderFragment"
-        android:label="OrderFragment" />
+        android:label="OrderFragment" >
+        <action
+            android:id="@+id/action_order_to_menu"
+            app:destination="@id/menuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dessertFragment"
         android:name="com.example.kfeapp.dessert.DessertFragment"
@@ -63,4 +70,8 @@
             android:id="@+id/action_dessert_to_order"
             app:destination="@id/orderFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.kfeapp.history.HistoryFragment"
+        android:label="HistoryFragment" />
 </navigation>

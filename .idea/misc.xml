@@ -7,11 +7,15 @@
         <entry key="app/src/main/res/layout/fragment_dessert.xml" value="0.1649214659685864" />
         <entry key="app/src/main/res/layout/fragment_drink.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.15885416666666666" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_order.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.340625" />
         <entry key="app/src/main/res/layout/item.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/item_history.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/menu/navdrawer_menu.xml" value="0.35572916666666665" />
       </map>
     </option>
   </component>

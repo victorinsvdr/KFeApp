@@ -50,7 +50,8 @@ class DessertFragment : Fragment() {
             rvDessert.addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
         }
 
-        /*
+        //INSERTS
+/*
         dessertViewModel.insert(Dessert(0, "Flan", "Default description, don't want to write", 2.00))
         dessertViewModel.insert(Dessert(0, "Ice Cream", "Default description, don't want to write", 1.50))
         dessertViewModel.insert(Dessert(0, "Apple Pie", "Default description, don't want to write", 1.20))
@@ -59,7 +60,7 @@ class DessertFragment : Fragment() {
         dessertViewModel.insert(Dessert(0, "Vodka Shot", "Default description, don't want to write", 1.00))
         dessertViewModel.insert(Dessert(0, "Jagger Shot", "Default description, don't want to write", 1.00))
         dessertViewModel.insert(Dessert(0, "JB Shot", "Default description, don't want to write", 1.00))
-        */
+*/
 
         binding.lifecycleOwner = this
         binding.dessertViewModel = dessertViewModel
