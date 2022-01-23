@@ -46,10 +46,7 @@ class OrderFragment : Fragment() {
         val drink_p = sharedViewModel.drinkPrice.value?.replace("€", "")?.toDouble()
         val dessert_n = sharedViewModel.dessert.value.toString()
         val dessert_p = sharedViewModel.dessertPrice.value?.replace("€", "")?.toDouble()
-
         val total = food_p?.let { dessert_p?.let { it1 -> drink_p?.plus(it)?.plus(it1) } }
-
-
 
         binding.apply {
             tvOrderDrinkName.setText(food_n)
@@ -67,7 +64,7 @@ class OrderFragment : Fragment() {
                         dessert_p?.let { it2 ->
                             total?.let { it3 ->
                                 Order(
-                                    0, food_n, it, drink_n, it1, dessert_n,
+                                    0, sharedViewModel.userName.value.toString(), food_n, it, drink_n, it1, dessert_n,
                                     it2, it3
                                 )
                             }

@@ -31,8 +31,8 @@ class OrderViewModel(
         Log.i("OrderViewModel", "OrderViewModel destroyed!")
     }
 
-    fun getAllOrders(): List<Order> {
-        return database.getAllOrders()
+    fun getAllOrders(user: String): List<Order> {
+        return database.getAllOrders(user)
     }
 
     fun insert(order: Order) {

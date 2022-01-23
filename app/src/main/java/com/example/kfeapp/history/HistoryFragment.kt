@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kfeapp.R
+import com.example.kfeapp.SharedViewModel
 import com.example.kfeapp.databinding.FragmentHistoryBinding
 import com.example.kfeapp.db.KFeDB
 import com.example.kfeapp.drink.DrinkViewModel
@@ -23,6 +25,8 @@ import com.example.kfeapp.order.OrderViewModel
 import com.example.kfeapp.order.OrderViewModelFactory
 
 class HistoryFragment : Fragment() {
+
+    private val sharedViewModel: SharedViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,8 +58,8 @@ class HistoryFragment : Fragment() {
 
     private fun fetchOrders(vm: OrderViewModel): ArrayList<HistoryModel> {
         val list = arrayListOf<HistoryModel>()
-        val orders = vm.getAllOrders()
-        Log.d("ORDERS", "${orders.size}")
+        val orders = vm.getAllOrders(sharedViewModel.userName.value.toString())
+        Log.d("ORDERS", "${sharedViewModel.userName.value.toString()}")
 
         for (id in 0..orders.size - 1) {
             val food_n = orders.get(id).foodName
@@ -70,7 +74,7 @@ class HistoryFragment : Fragment() {
             val historyModel = HistoryModel(
                 food_n, food_p, drink_n, drink_p, dessert_n, dessert_p, total, orderId
             )
-            Log.d("ORDERS", "$food_n, $food_p")
+            //Log.d("ORDERS", "$food_n, $food_p")
             list.add(historyModel)
         }
 

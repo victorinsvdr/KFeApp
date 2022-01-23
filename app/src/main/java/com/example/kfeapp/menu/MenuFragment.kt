@@ -46,12 +46,17 @@ class MenuFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_order_to_history)
             }
 
-            btnMenuGmail.setOnClickListener { view: View ->
-                //val email = Intent(Intent.ACTION_DIAL)
+
+            tvPhone.setOnClickListener { view: View ->
+                val phone = Intent(Intent.ACTION_DIAL)
+                phone.setData((Uri.parse("tel:" + binding.tvPhone.text.toString())))
+                startActivity(phone)
+            }
+
+            tvEmail.setOnClickListener{ view: View ->
                 val email = Intent(Intent.ACTION_SEND)
                 email.setType("text/plain")
 
-                //email.setType("text/plain")
                 startActivity(email)
             }
         }

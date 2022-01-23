@@ -15,7 +15,7 @@ import com.example.kfeapp.db.order.OrderDao
 import com.example.kfeapp.db.user.User
 import com.example.kfeapp.db.user.UserDao
 
-@Database(entities = [User::class, Drink::class, Food::class, Dessert::class, Order::class], version = 7, exportSchema = false)
+@Database(entities = [User::class, Drink::class, Food::class, Dessert::class, Order::class], version = 8, exportSchema = false)
 abstract class KFeDB : RoomDatabase() {
 
     abstract val userDao: UserDao

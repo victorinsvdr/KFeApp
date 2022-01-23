@@ -9,6 +9,9 @@ data class Order(
     @PrimaryKey(autoGenerate = true)
     var orderId: Long = 0L,
 
+    @ColumnInfo(name = "user")
+    var user: String,
+
     @ColumnInfo(name = "food_n")
     var foodName: String,
 
